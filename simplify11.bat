@@ -254,6 +254,7 @@ if !ramSize! == 6 set "svcHostThreshold=1729136740"
 if defined svcHostThreshold (
     call :setReg "HKLM\SYSTEM\ControlSet001\Control" "SvcHostSplitThresholdInKB" "!svcHostThreshold!" REG_DWORD
     echo Successfully applied tweak for !ramSize!GB RAM.
+REM !ramSize! points to the choice not the acual ram size selected, I don't know the syntax to fix 🤔 
 ) else (
     echo Invalid selection.
 )
